@@ -3,13 +3,19 @@ pipeline {
   
   stages {
     stage("SCM") {
-      git 'https://github.com/udiscopotato/Feb-26-JenkinsTask.git'
+      steps {
+        git 'https://github.com/udiscopotato/Feb-26-JenkinsTask.git'
+      }
     }
     stage("Python") {
-      sh "python3 main.py"
+      steps {
+        sh "python3 main.py"
+      }
     }
     stage("Java") {
-      sh "java Demo.java"
+      steps {
+        sh "java Demo.java"
+      }
     }
   }
 }
